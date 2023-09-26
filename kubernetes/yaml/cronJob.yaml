@@ -2,7 +2,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: telefraf-mtr
+  name: telegraf-mtr
   namespace: monitoring
 spec:
   schedule: "*/10 * * * *"
@@ -60,7 +60,7 @@ spec:
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: telefraf-speedtest
+  name: telegraf-speedtest
   namespace: monitoring
 spec:
   schedule: "*/10 * * * *"

@@ -11016,7 +11016,7 @@ metadata:
   name: influxdb-svc
   namespace: monitoring
 spec:
-  clusterIP: 10.43.37.100
+  clusterIP: 10.96.0.2
   ports:
   - port: 8086
     protocol: TCP
@@ -11194,10 +11194,10 @@ spec:
           configMap:
             name: network-dashboard
 ---
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: telefraf-mtr
+  name: telegraf-mtr
   namespace: monitoring
 spec:
   schedule: "*/10 * * * *"
@@ -11252,10 +11252,10 @@ spec:
                     path: telegraf-mtr.conf
 
 ---
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: telefraf-speedtest
+  name: telegraf-speedtest
   namespace: monitoring
 spec:
   schedule: "*/10 * * * *"
